@@ -1,0 +1,22 @@
+@mixin clearfix() {
+    &:after,
+    &:before {
+        content: " ";
+        display: table;
+        table-layout: fixed;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+@mixin bg-cover() {
+    background-size: cover;
+    background-position: center center;
+    -ms-behavior: url('/backgroundsize.min.htc');
+}
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

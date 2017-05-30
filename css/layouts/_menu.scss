@@ -1,0 +1,161 @@
+.width-wrap {
+    padding: 0 5px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.desktop-menu {
+    display: none;
+    @include make-breakpoint(md) {
+        display: inline-block;
+    };
+    float: right;
+    // display: inline-block;
+    text-align: right;
+    margin-top: 25px;
+
+    ul {
+        li {
+            display: inline-block;
+            // padding: 0 10px;
+            padding-left: 15px;
+            letter-spacing: 2px;
+
+            &:not(:last-of-type):after {
+                content: '/';
+                margin: 0 0 0 20px;
+                color: $red;
+            }
+
+            a {
+                color: #303841;
+                text-transform: uppercase;
+                text-decoration: none;
+                transition: color 0.3s ease;
+                display: inline-block;
+                font-size: 14px;
+
+                &:hover {
+                    color: $red;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 0;
+                    transition: width 0.5s ease, background-color 0.5s ease;
+                    background-color: white;
+                }
+
+                &:hover:after {
+                    width: 100%;
+                    background-color: $darkblue;
+                }
+            }
+        }
+    }
+}
+
+.mobile-menu {
+    display: block;
+    @include make-breakpoint(sm) {
+        margin: 20px 10px 0 0;
+    };
+    @include make-breakpoint(md) {
+        display: none;
+    };
+    float: right;
+    margin: 10px 5px 0 0;
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: $darkblue;
+        margin: 6px 0;
+    }
+}
+// .mobile-menu {
+// 	display: block;
+// 	float: right;
+// 	margin: 20px 20px 0 0;
+// 	@include make-breakpoint(sm) {
+// 		display: none;
+// 		// margin-top: 10px;
+// 	};
+//
+// 	.bar {
+// 		width: 20px;
+// 		height: 2px;
+// 		background-color: $darkblue;
+// 		margin: 6px 0;
+// 		display: block;
+// 	}
+// }
+// MOBILE MENU
+// .overlay {
+// 	height: 0;
+// 	width: 100%;
+// 	position: fixed;
+// 	z-index: 2;
+// 	top: 0;
+// 	left: 0;
+// 	background-color: $lightgrey;
+// 	overflow: hidden;
+// 	transition: height 0.3s ease;
+//
+// 	a {
+// 		padding: 12px 0;
+// 		text-decoration: none;
+// 		color: $lightblue;
+// 		display: block;
+// 		font-size: 25px;
+// 		position: relative;
+// 		text-transform: capitalize;
+// 		transition-property: color;
+// 		transition-duration: 0.4s;
+// 		@include make-breakpoint(sm) {
+// 			font-size: 30px;
+// 			padding: 15px 0;
+// 		}
+//
+// 		&:focus,
+// 		&:hover {
+// 			color: white;
+// 		}
+//
+// 		&:after {
+// 			content: '';
+// 			position: absolute;
+// 			bottom: 0;
+// 			left: 0;
+// 			width: 0;
+// 			border-bottom: 2px solid $lightblue;
+// 			transition: 0.6s;
+// 		}
+//
+// 		&:hover:after {
+// 			width: 100%;
+// 		}
+// 	}
+//
+// 	.closebtn {
+// 		position: absolute;
+// 		font-size: 40px;
+// 		top: 0;
+// 		top: 10px;
+// 		right: 10px;
+// 		@include make-breakpoint(sm) {
+// 			right: 5%;
+// 			font-size: 60px;
+// 		};
+// 	}
+// }
+//
+// .overlay-content {
+// 	position: relative;
+// 	top: 17%;
+// 	width: 100%;
+// 	text-align: center;
+// 	margin-top: 30px;
+// }
